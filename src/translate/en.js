@@ -26,6 +26,7 @@ export const en = {
     text3: `— Here’s the location https://maps.app.goo.gl/FmFBpJWwWAGNVgMa8 . Once you get there, order yourself a drink. Then show the bartender your season pass — he'll give you instructions for all three locations.`,
     text4: `— As soon as you’re seated with the stuff from the bartender, let me know right away.`,
     button: "I'm in a bar",
+    group: "Contact the quest control center",
     error: "Busy. Try again later.",
   },
 };

@@ -14,6 +14,10 @@ const Scene2Wizard = new Scenes.WizardScene("Scene2", async (ctx) => {
     t(ctx.session.lang).scene2.text4,
     Markup.inlineKeyboard([
       Markup.button.callback(t(ctx.session.lang).scene2.button, "next-scene-2"),
+      Markup.button.url(
+        t(ctx.session.lang).scene2.group,
+        "https://t.me/+vfwLjDqR7fs3MjI6",
+      ),
     ]),
   );
 });
