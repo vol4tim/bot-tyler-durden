@@ -1,0 +1,36 @@
+import { Composer, Format, Markup, Scenes } from "telegraf";
+import Profile from "../models/profile";
+
+const stepHandler = new Composer();
+
+stepHandler.action(/^lang-([a-z]+)$/, async (ctx) => {
+  const lang = ctx.match[1];
+  ctx.session.lang = lang;
+  await Profile.update(
+    { lang: lang },
+    {
+      where: { userId: ctx.from.id.toString() },
+    },
+  );
+  await ctx.scene.leave();
+  await ctx.scene.enter("Scene1");
+});
+
+stepHandler.use(() => {
+  return;
+});
+
+const RunWizard = new Scenes.WizardScene(
+  "Run",
+  async (ctx) => {
+    await ctx.reply(Format.bold(`### Городской квест "Киберпанк && Бангкок"`));
+    await ctx.reply(
+      `Select your language`,
+      Markup.inlineKeyboard([Markup.button.callback("Russian", "lang-ru")]),
+    );
+    return ctx.wizard.next();
+  },
+  stepHandler,
+);
+
+export { RunWizard };

@@ -1,0 +1,43 @@
+{
+  "name": "bot-tyler-durden",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "keywords": [
+    "Airalab",
+    "Telegram"
+  ],
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "babel src -d dist --source-maps inline",
+    "local": "NODE_ENV=development nodemon src/index.js --exec babel-node",
+    "local:generate": "NODE_ENV=development nodemon src/generate.js --exec babel-node",
+    "local:prod": "NODE_ENV=production nodemon src/index.js --exec babel-node",
+    "lint": "eslint src",
+    "pretty": "prettier --write \"./src/**/*.{js,ts,jsx,json}\""
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.25.9",
+    "@babel/core": "^7.26.0",
+    "@babel/node": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@eslint/js": "^9.13.0",
+    "eslint": "^9.13.0",
+    "globals": "^15.11.0",
+    "nodemon": "^3.1.7",
+    "prettier": "^3.3.3"
+  },
+  "dependencies": {
+    "@polkadot/api": "^14.2.3",
+    "@polkadot/util-crypto": "^13.2.2",
+    "@telegraf/session": "^2.0.0-beta.7",
+    "better-sqlite3": "^9.6.0",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.4",
+    "kysely": "^0.27.2",
+    "sequelize": "^6.37.5",
+    "sqlite3": "^5.1.7",
+    "telegraf": "^4.16.3",
+    "winston": "^3.15.0"
+  }
+}
