@@ -40,7 +40,7 @@ const stepHandler = new Composer();
 stepHandler.action("send", async (ctx) => {
   // await ctx.answerCbQuery();
   await ctx.editMessageReplyMarkup(undefined);
-  await ctx.reply(`Укажите ваш адрес`);
+  await ctx.reply(t(ctx.session.lang).scene1.text8);
   return ctx.wizard.next();
 });
 
@@ -57,12 +57,16 @@ const Scene1Wizard = new Scenes.WizardScene(
     await ctx.reply(t(ctx.session.lang).scene1.text3);
     await ctx.reply(t(ctx.session.lang).scene1.text4);
     await ctx.reply(t(ctx.session.lang).scene1.text5);
-    await ctx.reply(t(ctx.session.lang).scene1.text6);
     await ctx.reply(
-      Format.bold(t(ctx.session.lang).scene1.desc),
-      Markup.inlineKeyboard([
-        Markup.button.callback(t(ctx.session.lang).scene1.button, "send"),
-      ]),
+      t(ctx.session.lang)
+        .scene1.desc.replaceAll(".", "\\.")
+        .replaceAll("!", "\\!"),
+      {
+        parse_mode: "MarkdownV2",
+        ...Markup.inlineKeyboard([
+          Markup.button.callback(t(ctx.session.lang).scene1.button, "send"),
+        ]),
+      },
     );
     return ctx.wizard.next();
   },
@@ -72,8 +76,10 @@ const Scene1Wizard = new Scenes.WizardScene(
 
     if (!ethers.isAddress(addressAccount)) {
       await ctx.reply(
-        "Указан не валидный адрес",
-        Markup.inlineKeyboard([Markup.button.callback("Exit", "exit")]),
+        t(ctx.session.lang).scene1.error1,
+        Markup.inlineKeyboard([
+          Markup.button.callback(t(ctx.session.lang).scene1.exit, "exit"),
+        ]),
       );
       return;
     }
@@ -83,9 +89,12 @@ const Scene1Wizard = new Scenes.WizardScene(
     });
     if (seasonPass) {
       await ctx.reply(
-        "Пропуск уже активирован",
+        t(ctx.session.lang).scene1.error2,
         Markup.inlineKeyboard([
-          Markup.button.callback("Следующая сцена", "next-scene-1"),
+          Markup.button.callback(
+            t(ctx.session.lang).scene1.button_next,
+            "next-scene-1",
+          ),
         ]),
       );
       return;
@@ -101,8 +110,10 @@ const Scene1Wizard = new Scenes.WizardScene(
     const act = await findActivatedToken(addressAccount, nftContract);
     if (!act) {
       await ctx.reply(
-        "У вас нет активированого пропуска",
-        Markup.inlineKeyboard([Markup.button.callback("Exit", "exit")]),
+        t(ctx.session.lang).scene1.error3,
+        Markup.inlineKeyboard([
+          Markup.button.callback(t(ctx.session.lang).scene1.exit, "exit"),
+        ]),
       );
       return;
     }
@@ -111,8 +122,10 @@ const Scene1Wizard = new Scenes.WizardScene(
     ctx.session.addressAccount = addressAccount;
 
     await ctx.reply(
-      `Укажите подпись`,
-      Markup.inlineKeyboard([Markup.button.callback("Exit", "exit")]),
+      t(ctx.session.lang).scene1.text9,
+      Markup.inlineKeyboard([
+        Markup.button.callback(t(ctx.session.lang).scene1.exit, "exit"),
+      ]),
     );
     return ctx.wizard.next();
   },
@@ -120,21 +133,25 @@ const Scene1Wizard = new Scenes.WizardScene(
     if (!ctx.message || !ctx.message.text) {
       await ctx.reply(
         "Error",
-        Markup.inlineKeyboard([Markup.button.callback("Exit", "exit")]),
+        Markup.inlineKeyboard([
+          Markup.button.callback(t(ctx.session.lang).scene1.exit, "exit"),
+        ]),
       );
       return;
     }
 
     const isValid = verifyMessage({
-      message: "Я обезьянка-космонавт!",
+      message: "I'm a space monkey!",
       address: ctx.session.addressAccount,
       signature: ctx.message.text,
     });
 
     if (!isValid) {
       await ctx.reply(
-        "Пропуск не действителен",
-        Markup.inlineKeyboard([Markup.button.callback("Exit", "exit")]),
+        t(ctx.session.lang).scene1.error4,
+        Markup.inlineKeyboard([
+          Markup.button.callback(t(ctx.session.lang).scene1.exit, "exit"),
+        ]),
       );
       return;
     }

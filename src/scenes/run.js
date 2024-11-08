@@ -23,10 +23,13 @@ stepHandler.use(() => {
 const RunWizard = new Scenes.WizardScene(
   "Run",
   async (ctx) => {
-    await ctx.reply(Format.bold(`### Городской квест "Киберпанк && Бангкок"`));
+    await ctx.reply(Format.bold(`City Quest "Cyberpunk && Bangkok”`));
     await ctx.reply(
       `Select your language`,
-      Markup.inlineKeyboard([Markup.button.callback("Russian", "lang-ru")]),
+      Markup.inlineKeyboard([
+        Markup.button.callback("English", "lang-en"),
+        Markup.button.callback("Russian", "lang-ru"),
+      ]),
     );
     return ctx.wizard.next();
   },

@@ -1,0 +1,30 @@
+export const en = {
+  scene1: {
+    title: "Scene 1: Welcoming the new space monkey",
+    text1: `— So, astronaut, you finally made it. Your trips to IKEA don’t matter anymore. The issue isn’t that you once bought an extra shelf. The issue is that while you were caught up in the details of rent and credit, they’ve already pulled one over on you. Twice.`,
+    text2: `— You think you're in control of your life. In reality, all these discounts, new gadgets, and "personalized" offers are just a way to keep you on a leash. They know what you'll do tomorrow, which means, to them, you're simply a predictable and  valuable resource.`,
+    text3: `— But here’s the thing: even if you become the one giving the orders, you’ll still be part of the system. Shepherd or sheep — the roles may differ, but the rules stay the same.`,
+    text4: `— The real choice isn’t about climbing higher; it’s about leaving the game entirely. It’s not about power — it’s about freedom. Almost like breaking out of samsara. If you’re tired of living in this loop, welcome to cyberpunk.`,
+    text5: `— Here's your first step. Sign this. A digital signature — and you're with us.`,
+    desc: `*Use your account with an activated season pass to sign a message with the text "I'm a space monkey!". You can use the [MetaMask](https://metamask.io/) app and the message signing service from [Etherscan](https://etherscan.io/verifiedSignatures) for this.*`,
+    button: "Send Tyler a signed message",
+    text7:
+      "— Signed — means you’re in. From here, we’ll see how far you can go. The fight isn’t with someone else — it’s with yourself.",
+    button_next: "Next scene",
+    text8: "Please enter your address in mainnet.",
+    error1: "The address specified is not valid",
+    error2: "The pass has already been activated",
+    error3: "You don't have an activated pass",
+    error4: "The pass is not valid",
+    text9: "Enter the hash of the signed message",
+    exit: "Exit",
+  },
+  scene2: {
+    title: "Scene 2: Tyler escorts to the first location",
+    text1: `— Alright, astronaut. You're in Bangkok, and it’s a great chance to dive into the basics of cyberpunk.  Sure, it's not Chiba City, but here, freedom echoes around every corner.`,
+    text2: `— Haven't read Neuromancer or played Cyberpunk? No? Okay, no big deal. Just don’t bluescreen. Let’s start simple: go to a bar and do something you’ve never tried before.`,
+    text3: `— Here’s the location https://maps.app.goo.gl/FmFBpJWwWAGNVgMa8 . Once you get there, order yourself a drink. Then show the bartender your season pass — he'll give you instructions for all three locations.`,
+    text4: `— As soon as you’re seated with the stuff from the bartender, let me know right away.`,
+    button: "I'm in a bar",
+  },
+};
