@@ -24,17 +24,22 @@ export const watcher = async () => {
       cid = item.data[2].toHuman();
     }
     if (updateTime && cid) {
+      // if (updateTime && cid && cid === "13.7216119,100.5648836") {
       const profile = await Profile.findOne({ where: { location: 1 } });
       if (profile) {
         const header = await api.rpc.chain.getHeader(createdAtHash);
         const blockNumber = header.number.unwrap();
-        await bot.telegram.sendMessage(
-          profile.userId,
-          `Кажись у тебя получилось!\nВот координаты следующей локации: 13.7216119,100.5648836\nЗапись в Робономике: https://robonomics.subscan.io/extrinsic/${blockNumber}-${txIndex}`,
-          Markup.inlineKeyboard([
-            Markup.button.callback("Следующая сцена", "next-scene-3"),
-          ]),
-        );
+        try {
+          await bot.telegram.sendMessage(
+            profile.userId,
+            `Кажись у тебя получилось!\nВот координаты следующей локации: 13.7216119,100.5648836\nЗапись в Робономике: https://robonomics.subscan.io/extrinsic/${blockNumber}-${txIndex}`,
+            Markup.inlineKeyboard([
+              Markup.button.callback("Следующая сцена", "next-scene-3"),
+            ]),
+          );
+        } catch (error) {
+          console.log(error);
+        }
         profile.location = null;
         await profile.save();
         await Location.update(
