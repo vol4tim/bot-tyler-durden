@@ -23,8 +23,7 @@ export const watcher = async () => {
       updateTime = item.data[1].toNumber();
       cid = item.data[2].toHuman();
     }
-    if (updateTime && cid) {
-      // if (updateTime && cid && cid === "13.7216119,100.5648836") {
+    if (updateTime && cid && cid.split("next_location").length >= 2) {
       const profile = await Profile.findOne({ where: { location: 1 } });
       if (profile) {
         const header = await api.rpc.chain.getHeader(createdAtHash);
