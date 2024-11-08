@@ -25,7 +25,7 @@ Scene2Wizard.action("next-scene-2", async (ctx) => {
     where: { number: 1 },
   });
   if (!l || l.status === STATUS.NOT_AVAIBLE) {
-    await ctx.reply(`Занято. Попробуйте позже`);
+    await ctx.reply(t(ctx.session.lang).scene2.error);
     return;
   } else {
     l.status = STATUS.NOT_AVAIBLE;

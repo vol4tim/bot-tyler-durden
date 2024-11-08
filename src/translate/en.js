@@ -6,7 +6,7 @@ export const en = {
     text3: `— But here’s the thing: even if you become the one giving the orders, you’ll still be part of the system. Shepherd or sheep — the roles may differ, but the rules stay the same.`,
     text4: `— The real choice isn’t about climbing higher; it’s about leaving the game entirely. It’s not about power — it’s about freedom. Almost like breaking out of samsara. If you’re tired of living in this loop, welcome to cyberpunk.`,
     text5: `— Here's your first step. Sign this. A digital signature — and you're with us.`,
-    desc: `*Use your account with an activated season pass to sign a message with the text "I'm a space monkey!". You can use the [MetaMask](https://metamask.io/) app and the message signing service from [Etherscan](https://etherscan.io/verifiedSignatures) for this.*`,
+    desc: `*Use your account with an activated season pass to sign a message with the text "\`I'm a space monkey!\`". You can use the [MetaMask](https://metamask.io/) app and the message signing service from [Etherscan](https://etherscan.io/verifiedSignatures) for this.*`,
     button: "Send Tyler a signed message",
     text7:
       "— Signed — means you’re in. From here, we’ll see how far you can go. The fight isn’t with someone else — it’s with yourself.",
@@ -26,5 +26,6 @@ export const en = {
     text3: `— Here’s the location https://maps.app.goo.gl/FmFBpJWwWAGNVgMa8 . Once you get there, order yourself a drink. Then show the bartender your season pass — he'll give you instructions for all three locations.`,
     text4: `— As soon as you’re seated with the stuff from the bartender, let me know right away.`,
     button: "I'm in a bar",
+    error: "Busy. Try again later.",
   },
 };
