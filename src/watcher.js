@@ -10,7 +10,7 @@ export const watcher = async () => {
   on(api, { section: "datalog", method: "NewRecord" }, async (results) => {
     const r = results.filter((item) => {
       return (
-        item.success && item.data[0].toHuman() === process.env.CONTRACTS_NFT
+        item.success && item.data[0].toHuman() === process.env.CONTROLLER_1
       );
     });
     let updateTime = null;
