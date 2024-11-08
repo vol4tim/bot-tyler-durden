@@ -29,6 +29,6 @@ export function start() {
         lastName: ctx.from.last_name,
       });
     }
-    ctx.scene.enter("Run");
+    await ctx.scene.enter("Run");
   });
 }
