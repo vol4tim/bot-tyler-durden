@@ -39,6 +39,15 @@ Scene4Wizard.action("next-scene-4", async (ctx) => {
     );
   }
   await ctx.editMessageReplyMarkup(undefined);
+
+  let lang = "en";
+  if (ctx.session.lang) {
+    lang = ctx.session.lang;
+  }
+  await ctx.replyWithAudio({
+    source: path.resolve(__dirname, `../media/${lang}/4.mp3`),
+  });
+
   await ctx.reply(t(ctx.session.lang).scene4.activated);
   // await ctx.scene.leave();
   // await ctx.scene.enter("Scene5");
