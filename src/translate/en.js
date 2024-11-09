@@ -50,6 +50,10 @@ export const en = {
     error: "Busy. Try again later.",
     activated:
       "The location is activated. You have the coordinates. Show your season pass at the entrance. Don’t delay.",
-    finish: `— Looks like you did it! Here are the coordinates for the next location: 13.7176564,100.5668314\nIn Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
+    finish: `— Looks like you did it! \nIn Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
+    // finish: `— Looks like you did it! Here are the coordinates for the next location: 13.7176564,100.5668314\nIn Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
+  },
+  scene5: {
+    title: `The next location will be available tomorrow.`,
   },
 };

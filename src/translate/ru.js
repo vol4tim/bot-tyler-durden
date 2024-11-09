@@ -50,6 +50,10 @@ export const ru = {
     error: "Занято. Попробуйте позже",
     activated:
       "Локация активирована. Координаты у тебя. На входе предъяви сезонный пропуск. Не затягивай.",
-    finish: `Кажись у тебя получилось!\nВот координаты следующей локации: 13.7176564,100.5668314\nЗапись в Робономике: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
+    finish: `Кажись у тебя получилось!\nЗапись в Робономике: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
+    // finish: `Кажись у тебя получилось!\nВот координаты следующей локации: 13.7176564,100.5668314\nЗапись в Робономике: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
+  },
+  scene5: {
+    title: `Следующая локация будет доступна завтра.`,
   },
 };
