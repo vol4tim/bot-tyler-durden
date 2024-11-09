@@ -36,7 +36,7 @@ export const en = {
     text3: `— Go into the toilet and look around. There will be a leak sensor, as in the instructions. You need to close its contacts.`,
     text4: `— You can lick it. Or come up with something smarter — it’s your call.`,
     text5: `— Once you do that, I’ll see the signal on my frequency and send you the coordinates for the next location. There, you'll find a special braindance featuring the events of a certain massage room.`,
-    finish: `— Looks like you did it! Here are the coordinates for the next location: 13.7216119,100.5648836\nIn Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
+    finish: `— Looks like you did it! Here are the coordinates for the next location: 13.7216119,100.5648836 https://maps.app.goo.gl/zSq5HqQHHCfuUYjQ8\nIn Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
   },
   scene4: {
     title: `Сцена 4: По пути в массажный салон`,
