@@ -29,7 +29,16 @@ Scene2Wizard.action("next-scene-2", async (ctx) => {
     where: { number: 1 },
   });
   if (!l || l.status === STATUS.NOT_AVAIBLE) {
-    await ctx.reply(t(ctx.session.lang).scene2.error);
+    const profile = await Profile.findOne({
+      where: { userId: ctx.from.id.toString() },
+    });
+    if (profile && profile.location === 1) {
+      await ctx.editMessageReplyMarkup(undefined);
+      await ctx.scene.leave();
+      await ctx.scene.enter("Scene3");
+    } else {
+      await ctx.reply(t(ctx.session.lang).scene2.error);
+    }
     return;
   } else {
     l.status = STATUS.NOT_AVAIBLE;

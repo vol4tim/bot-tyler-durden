@@ -1,24 +1,21 @@
+import path from "path";
 import { Format, Scenes } from "telegraf";
+import { t } from "../translate";
 
 const Scene3Wizard = new Scenes.WizardScene("Scene3", async (ctx) => {
-  await ctx.reply(
-    Format.bold(`### Сцена 3: В баре — кризис среднего возраста`),
-  );
-  await ctx.reply(
-    `— Забавное местечко. Кризис среднего возраста. Вместо посметрия, к которому измученные мегаполисом дети улиц стремились мы имеем небрежно растянутый галстук на шее замученного честного налогоплательщика. Смех и грех. Этот бар наш портал.  Точнее толчок в этом баре.`,
-  );
-  await ctx.reply(
-    `— Этот бар — не просто бар. Это наш портал. Или, если точнее, толчок.`,
-  );
-  await ctx.reply(
-    `— Зайди в туалет и осмотрись. Там будет датчик протечки, как в инструкции. Тебе нужно его замкнуть.`,
-  );
-  await ctx.reply(
-    `— Можешь лизнуть его. Или придумать что-то поумнее — решай сам.`,
-  );
-  await ctx.reply(
-    `— Как только ты это сделаешь, я увижу сигнал на своей частоте. И отправлю тебе координаты следующей локации. Там тебя ждёт особенный брейнденс событий одной массажной кабинки.`,
-  );
+  await ctx.reply(Format.bold(t(ctx.session.lang).scene3.title));
+  let lang = "en";
+  if (ctx.session.lang) {
+    lang = ctx.session.lang;
+  }
+  await ctx.replyWithAudio({
+    source: path.resolve(__dirname, `../media/${lang}/3.mp3`),
+  });
+  await ctx.reply(t(ctx.session.lang).scene3.text1);
+  await ctx.reply(t(ctx.session.lang).scene3.text2);
+  await ctx.reply(t(ctx.session.lang).scene3.text3);
+  await ctx.reply(t(ctx.session.lang).scene3.text4);
+  await ctx.reply(t(ctx.session.lang).scene3.text5);
 });
 
 export { Scene3Wizard };

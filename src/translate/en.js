@@ -29,4 +29,25 @@ export const en = {
     group: "Contact the quest control center",
     error: "Busy. Try again later.",
   },
+  scene3: {
+    title: `Scene 3: At the bar “Midlife Crisis”`,
+    text1: `— A funny place. A midlife crisis. Instead of Afterlife, to which the street kids, exhausted by the metropolis, once sought, we have a loosely knotted tie on the neck of a tortured, honest taxpayer. Сomedy and tragedy at the same time.`,
+    text2: `— This bar is our portal. More precisely, the restroom in this bar.`,
+    text3: `— Go into the toilet and look around. There will be a leak sensor, as in the instructions. You need to close its contacts.`,
+    text4: `— You can lick it. Or come up with something smarter — it’s your call.`,
+    text5: `— Once you do that, I’ll see the signal on my frequency and send you the coordinates for the next location. There, you'll find a special braindance featuring the events of a certain massage room.`,
+  },
+  scene4: {
+    title: `Сцена 4: По пути в массажный салон`,
+    text1: `— Here’s an interesting historical fact: when that infamous conflict was raging on the nearby peninsula —the one Kubrick depicted in Full Metal Jacket — some of the brave soldiers fighting there were stationed nearby, in Pattaya. They liked it so much that, a decade later, sex tourism in Thailand was thriving like never before.`,
+    text2: `— And now it’s become even simpler: 4- and 5-star hotels, and on Sukhumvit, girls stand along the road. Just shake her hand — and she’s yours, do whatever you want. All funded by investors' money, of course.`,
+    text3: `— You know what’s especially cringeworthy? Pattaya is now a hangout not only for tourists looking for sex, but also for married guys from post-Soviet countries. Imagine the reaction of an Englishman when he finds out that a Belarusian or Kazakh is coming here with his wife and three children? Paradoxes, plain and simple.`,
+    text4: `— Alright, let's get down to business. You need to get into a massage parlor of my friend's. Show your season pass at the entrance, and she’ll guide you to a special room. No one works in that room anymore, but one interesting story has been preserved within its walls. You’ll have to see it for yourself.`,
+    text5: `— Before you enter, the parlor needs to be activated. The owner is a decent woman, so don't think of the place as a jerk-off point. Message me when you're 15 minutes away from the spot, and I'll check that there won't be anyone extra there.  You should be met and shown in within 30 minutes.`,
+    button: "Activate location for 45 min",
+    group: "Contact the quest control center",
+    error: "Busy. Try again later.",
+    activated:
+      "The location is activated. You have the coordinates. Show your season pass at the entrance. Don’t delay.",
+  },
 };

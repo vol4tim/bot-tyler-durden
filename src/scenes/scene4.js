@@ -1,28 +1,45 @@
-import { Format, Scenes } from "telegraf";
+import { Format, Markup, Scenes } from "telegraf";
+import Location, { STATUS } from "../models/location";
+import Profile from "../models/profile";
+import { t } from "../translate";
 
 const Scene4Wizard = new Scenes.WizardScene("Scene4", async (ctx) => {
-  await ctx.reply(Format.bold(`### Сцена 4: По пути в массажный салон`));
+  await ctx.reply(Format.bold(t(ctx.session.lang).scene4.title));
+  await ctx.reply(t(ctx.session.lang).scene4.text1);
+  await ctx.reply(t(ctx.session.lang).scene4.text2);
+  await ctx.reply(t(ctx.session.lang).scene4.text3);
+  await ctx.reply(t(ctx.session.lang).scene4.text4);
   await ctx.reply(
-    `— Занимательный факт из истории. Когда на соседнем полуострове разворачивалась та самая заварушка, о которой можно узнать у Кубрика в «Цельнометаллической оболочке», те бравые ребята, что там воевали, иногда квартировались здесь, недалеко — в Паттайе. Им так понравилось, что спустя десяток лет секс-туризм в Таиланде расцвёл пышным цветом.`,
-  );
-  await ctx.reply(
-    `— А теперь всё стало ещё проще: отели на 4 и 5 звёзд, а на Сукхумвите девчонки сами стоят вдоль дороги. Просто пожми руку, и она твоя — делай, что хочешь. Всё за деньги инвесторов, естественно.`,
-  );
-  await ctx.reply(
-    `— А знаешь, что особенно кринжово? В Паттайе теперь тусуются не только туристы за сексом, но и семейные ребята из постсоветских стран. Прикинь реакцию англичанина, когда он узнаёт, что белорус или казах едет сюда с женой и тремя детьми? Парадоксы, да и только.`,
-  );
-  await ctx.reply(
-    `— Ладно, ближе к делу. Тебе нужно попасть в массажный салон моей знакомой. На входе покажи сезонный пропуск, и она проведёт тебя в одну особую кабинку. В этой кабинке больше никто не работает, но в её стенах сохранилась одна интересная история. Тебе придётся взглянуть на неё самому.`,
-  );
-  await ctx.reply(
-    `— Прежде чем зайти, салон нужно активировать.Хозяйка — приличная женщина, так что не думай о месте, как о дрочильне.Напиши мне, когда будешь в 15 минутах от точки, и я проверю, что никого лишнего там не будет.Тебя должны встретить и провести в течение 30 минут.`,
+    t(ctx.session.lang).scene4.text5,
+    Markup.inlineKeyboard([
+      Markup.button.callback(t(ctx.session.lang).scene4.button, "next-scene-4"),
+      Markup.button.url(
+        t(ctx.session.lang).scene4.group,
+        "https://t.me/+vfwLjDqR7fs3MjI6",
+      ),
+    ]),
   );
 });
 
 export { Scene4Wizard };
 
 Scene4Wizard.action("next-scene-4", async (ctx) => {
+  const l = await Location.findOne({
+    where: { number: 2 },
+  });
+  if (!l || l.status === STATUS.NOT_AVAIBLE) {
+    await ctx.reply(t(ctx.session.lang).scene4.error);
+    return;
+  } else {
+    l.status = STATUS.NOT_AVAIBLE;
+    await l.save();
+    await Profile.update(
+      { location: 2 },
+      { where: { userId: ctx.from.id.toString() } },
+    );
+  }
   await ctx.editMessageReplyMarkup(undefined);
-  await ctx.scene.leave();
-  await ctx.scene.enter("Scene5");
+  await ctx.reply(t(ctx.session.lang).scene4.activated);
+  // await ctx.scene.leave();
+  // await ctx.scene.enter("Scene5");
 });
