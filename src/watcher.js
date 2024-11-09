@@ -3,6 +3,7 @@ import bot from "./bot";
 import Location, { STATUS } from "./models/location";
 import Profile from "./models/profile";
 import { getApi, on } from "./tools/polkadot";
+import { t } from "./translate";
 
 export const watcher = async () => {
   const api = await getApi(process.env.ENDPOINT_PARACHAIN);
@@ -44,8 +45,9 @@ export const watcher = async () => {
               if (location === 1) {
                 await bot.telegram.sendMessage(
                   profile.userId,
-                  `Looks like you did it! Here are the coordinates for the next location: 13.7216119,100.5648836\nIn Robonomics: https://robonomics.subscan.io/extrinsic/${blockNumber}-${item.txIndex}`,
-                  // `Кажись у тебя получилось!\nВот координаты следующей локации: 13.7216119,100.5648836\nЗапись в Робономике: https://robonomics.subscan.io/extrinsic/${blockNumber}-${txIndex}`,
+                  t(profile.lang)
+                    .scene3.finish.replace("__blockNumber__", blockNumber)
+                    .replace("__txIndex__", item.txIndex),
                   Markup.inlineKeyboard([
                     Markup.button.callback("Next scene", "next-scene-3"),
                   ]),
@@ -53,7 +55,9 @@ export const watcher = async () => {
               } else if (location === 2) {
                 await bot.telegram.sendMessage(
                   profile.userId,
-                  `Looks like you did it! Here are the coordinates for the next location: 13.7176564,100.5668314\nIn Robonomics: https://robonomics.subscan.io/extrinsic/${blockNumber}-${item.txIndex}`,
+                  t(profile.lang)
+                    .scene4.finish.replace("__blockNumber__", blockNumber)
+                    .replace("__txIndex__", item.txIndex),
                   Markup.inlineKeyboard([
                     Markup.button.callback("Next scene", "next-scene-44"),
                   ]),
