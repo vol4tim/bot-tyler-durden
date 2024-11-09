@@ -25,3 +25,8 @@ Scene3Wizard.action("next-scene-3", async (ctx) => {
   await ctx.scene.leave();
   await ctx.scene.enter("Scene4");
 });
+Scene3Wizard.action("back-scene-3", async (ctx) => {
+  await ctx.editMessageReplyMarkup(undefined);
+  await ctx.scene.leave();
+  await ctx.scene.enter("Scene2");
+});

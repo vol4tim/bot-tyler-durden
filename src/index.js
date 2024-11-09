@@ -5,6 +5,7 @@ import { Scenes, session } from "telegraf";
 import bot from "./bot";
 import db from "./models/db";
 import { PATH_SESSION_DB } from "./paths";
+import { resetLocation } from "./resetLocation";
 import { RunWizard } from "./scenes/run";
 import { Scene1Wizard } from "./scenes/scene1";
 import { Scene2Wizard } from "./scenes/scene2";
@@ -45,4 +46,5 @@ const runApp = () => {
 db.sequelize.sync().then(async () => {
   runApp();
   await watcher();
+  await resetLocation();
 });

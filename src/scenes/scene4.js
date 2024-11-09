@@ -48,3 +48,8 @@ Scene4Wizard.action("next-scene-44", async (ctx) => {
   await ctx.scene.leave();
   // await ctx.scene.enter("Scene5");
 });
+Scene4Wizard.action("back-scene-4", async (ctx) => {
+  await ctx.editMessageReplyMarkup(undefined);
+  await ctx.scene.leave();
+  await ctx.scene.enter("Scene4");
+});
