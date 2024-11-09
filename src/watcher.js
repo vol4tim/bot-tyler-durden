@@ -55,7 +55,7 @@ export const watcher = async () => {
                   profile.userId,
                   `Looks like you did it! Here are the coordinates for the next location: 13.7176564,100.5668314\nIn Robonomics: https://robonomics.subscan.io/extrinsic/${blockNumber}-${item.txIndex}`,
                   Markup.inlineKeyboard([
-                    Markup.button.callback("Next scene", "next-scene-4"),
+                    Markup.button.callback("Next scene", "next-scene-44"),
                   ]),
                 );
               }
