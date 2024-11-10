@@ -60,6 +60,7 @@ const Scene1Wizard = new Scenes.WizardScene(
     await ctx.reply(
       t(ctx.session.lang)
         .scene1.desc.replaceAll(".", "\\.")
+        .replaceAll("-", "\\-")
         .replaceAll("!", "\\!"),
       {
         parse_mode: "MarkdownV2",

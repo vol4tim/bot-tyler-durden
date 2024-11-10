@@ -35,20 +35,32 @@ export const watcher = async () => {
                     profile.userId,
                     t(profile.lang)
                       .scene3.finish.replace("__blockNumber__", blockNumber)
-                      .replace("__txIndex__", item.txIndex),
-                    Markup.inlineKeyboard([
-                      Markup.button.callback("Next scene", "next-scene-3"),
-                    ]),
+                      .replace("__txIndex__", item.txIndex)
+                      .replaceAll(".", "\\.")
+                      .replaceAll("-", "\\-")
+                      .replaceAll("!", "\\!"),
+                    {
+                      parse_mode: "MarkdownV2",
+                      ...Markup.inlineKeyboard([
+                        Markup.button.callback("Next scene", "next-scene-3"),
+                      ]),
+                    },
                   );
                 } else if (location === 2) {
                   await bot.telegram.sendMessage(
                     profile.userId,
                     t(profile.lang)
                       .scene4.finish.replace("__blockNumber__", blockNumber)
-                      .replace("__txIndex__", item.txIndex),
-                    Markup.inlineKeyboard([
-                      Markup.button.callback("Next scene", "next-scene-44"),
-                    ]),
+                      .replace("__txIndex__", item.txIndex)
+                      .replaceAll(".", "\\.")
+                      .replaceAll("-", "\\-")
+                      .replaceAll("!", "\\!"),
+                    {
+                      parse_mode: "MarkdownV2",
+                      ...Markup.inlineKeyboard([
+                        Markup.button.callback("Next scene", "next-scene-44"),
+                      ]),
+                    },
                   );
                 }
               } catch (error) {

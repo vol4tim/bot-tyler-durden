@@ -6,7 +6,7 @@ export const en = {
     text3: `— But here’s the thing: even if you become the one giving the orders, you’ll still be part of the system. Shepherd or sheep — the roles may differ, but the rules stay the same.`,
     text4: `— The real choice isn’t about climbing higher; it’s about leaving the game entirely. It’s not about power — it’s about freedom. Almost like breaking out of samsara. If you’re tired of living in this loop, welcome to cyberpunk.`,
     text5: `— Here's your first step. Sign this. A digital signature — and you're with us.`,
-    desc: `*Use your account with an activated season pass to sign a message with the text "\`I'm a space monkey!\`". You can use the [MetaMask](https://metamask.io/) app and the message signing service from [Etherscan](https://etherscan.io/verifiedSignatures) for this.*`,
+    desc: `> Use your account with an activated season pass to sign a message with the text "\`I'm a space monkey!\`". You can use the [MetaMask](https://metamask.io/) app and the message signing service from [Etherscan](https://etherscan.io/verifiedSignatures) for this.`,
     button: "Send Tyler a signed message",
     text7:
       "— Signed — means you’re in. From here, we’ll see how far you can go. The fight isn’t with someone else — it’s with yourself.",
@@ -36,7 +36,7 @@ export const en = {
     text3: `— Go into the toilet and look around. There will be a leak sensor, as in the instructions. You need to close its contacts.`,
     text4: `— You can lick it. Or come up with something smarter — it’s your call.`,
     text5: `— Once you do that, I’ll see the signal on my frequency and send you the coordinates for the next location. There, you'll find a special braindance featuring the events of a certain massage room.`,
-    finish: `— Looks like you did it! Here are the coordinates for the next location: 13.7216119,100.5648836 https://maps.app.goo.gl/zSq5HqQHHCfuUYjQ8\nIn Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
+    finish: `> Looks like you did it! Here are the coordinates for the next location: 13.7216119,100.5648836 https://maps.app.goo.gl/zSq5HqQHHCfuUYjQ8\nIn Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
   },
   scene4: {
     title: `Сцена 4: По пути в массажный салон`,
@@ -50,8 +50,8 @@ export const en = {
     error: "Busy. Try again later.",
     activated:
       "The location is activated. You have the coordinates. Show your season pass at the entrance. Don’t delay.",
-    finish: `— Looks like you did it! \nIn Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
-    // finish: `— Looks like you did it! Here are the coordinates for the next location: 13.7176564,100.5668314\nIn Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
+    finish: `> Looks like you did it! \nIn Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
+    // finish: `> Looks like you did it! Here are the coordinates for the next location: 13.7176564,100.5668314\nIn Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
   },
   scene5: {
     title: `The next location will be available tomorrow.`,
