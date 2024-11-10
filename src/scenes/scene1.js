@@ -1,4 +1,5 @@
 import { ethers } from "ethers";
+import path from "path";
 import { Composer, Format, Markup, Scenes } from "telegraf";
 import nft_abi from "../abi/NFT.json";
 import SeasonPass from "../models/seasonPass";
@@ -64,6 +65,16 @@ const Scene1Wizard = new Scenes.WizardScene(
         .replaceAll("!", "\\!"),
       {
         parse_mode: "MarkdownV2",
+        // ...Markup.inlineKeyboard([
+        //   Markup.button.callback(t(ctx.session.lang).scene1.button, "send"),
+        // ]),
+      },
+    );
+    await ctx.replyWithVideo(
+      {
+        source: path.resolve(__dirname, `../media/1.mp4`),
+      },
+      {
         ...Markup.inlineKeyboard([
           Markup.button.callback(t(ctx.session.lang).scene1.button, "send"),
         ]),
