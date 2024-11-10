@@ -11,6 +11,15 @@ const Scene2Wizard = new Scenes.WizardScene("Scene2", async (ctx) => {
   await ctx.reply(t(ctx.session.lang).scene2.text2);
   await ctx.reply(t(ctx.session.lang).scene2.text3);
   await ctx.reply(
+    t(ctx.session.lang)
+      .scene2.text3_desc.replaceAll(".", "\\.")
+      .replaceAll("-", "\\-")
+      .replaceAll("!", "\\!"),
+    {
+      parse_mode: "MarkdownV2",
+    },
+  );
+  await ctx.reply(
     t(ctx.session.lang).scene2.text4,
     Markup.inlineKeyboard([
       Markup.button.callback(t(ctx.session.lang).scene2.button, "next-scene-2"),

@@ -33,8 +33,15 @@ export const watcher = async () => {
                 if (location === 1) {
                   await bot.telegram.sendMessage(
                     profile.userId,
+                    t(profile.lang).scene3.finish,
+                  );
+                  await bot.telegram.sendMessage(
+                    profile.userId,
                     t(profile.lang)
-                      .scene3.finish.replace("__blockNumber__", blockNumber)
+                      .scene3.finish_desc.replace(
+                        "__blockNumber__",
+                        blockNumber,
+                      )
                       .replace("__txIndex__", item.txIndex)
                       .replaceAll(".", "\\.")
                       .replaceAll("-", "\\-")

@@ -1,3 +1,4 @@
+import path from "path";
 import { Format, Markup, Scenes } from "telegraf";
 import Location, { STATUS } from "../models/location";
 import Profile from "../models/profile";
