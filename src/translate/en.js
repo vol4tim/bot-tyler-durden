@@ -82,20 +82,22 @@ export const en = {
   scene6: {
     title: `Scene 6: The Final Mission`,
     text1:
-      "— Your final destination is the \"monkey astronaut\" observation center. It's a pretty secret place, so don't attract attention. You need a container building with a big sign that says \"I love pizza.\" Find a lattice door and a ladder, go up to the third floor. There, a standard American double room awaits you. You'll find open suitcases in the room. Find the plastic hotel key with a picture of a monkey and go out onto the balcony. There, you might feel like a reaper — crack open the android's skull, look inside, and find the code for the safe.",
+      "— Your final destination is the observation center for space monkeys. It's a pretty secretive spot, so keep a low profile. Look for a container structure with a big sign that says 'I ❤️ PIZZA.' Find the grated door and a staircase, head up to the third floor. There you’ll find a standard American double room. Inside, you’ll see open suitcases. Search for a plastic hotel key with a monkey on it and step out onto the balcony. Out there, you might feel like a ripper — open the android's cranial casing, look inside, and find the code for the safe.",
     button: "I'm here",
     group: "Contact the quest control center",
-    error: "Tyler is busy. Try again later.",
-    activated: "Location activated.",
+    error:
+      "Hold on. There's someone suspicious hanging around on the cameras. Wait 15 minutes and try again.",
+    activated:
+      "— Great. The point is yours for 15 minutes. Don't screw this up.",
     finish1: "— It worked!",
     finish2:
-      "— Well, that's it, astronaut! A couple of simple tasks during the flight - that's what I think you were",
+      "— That’s it, astronaut! A few simple tasks during the flight—just what you needed, I think. Don’t forget why you’re doing all this—to break free from the system. Disconnect from the clouds!",
     finish3:
-      "> The quest is prepared by the Robonomics team. If you are interested in supporting us or learning more, write any message in response, and it will reach the developers. Good luck!",
+      "> The quest was prepared by the Robonomics team. If you are interested in supporting us or learning more, write a message in this chat, and it will reach the developers. Good luck!",
     reset:
-      "Hey, astronaut, are you asleep there? I didn't see your signal. You have 25 more minutes to complete the task.",
+      "I don’t know what you’re messing around with over there, but listen up—this is your last chance, buddy. After this, the digital door will close.",
     button_reset: "Try again",
     gameover:
-      "Well, you screwed up, astronaut, too bad. If you want to escape the black mirror for real, come find me again someday. Until then, bye.",
+      "Well, you screwed up, astronaut, such a shame. If you ever want to escape the black mirror for real, find me again someday. But for now —farewell.",
   },
 };
