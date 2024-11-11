@@ -129,7 +129,8 @@ export const watcher = async () => {
           item.createdAtHash &&
           item.success &&
           (item.data[0].toHuman() === process.env.CONTROLLER_1 ||
-            item.data[0].toHuman() === process.env.CONTROLLER_2)
+            item.data[0].toHuman() === process.env.CONTROLLER_2 ||
+            item.data[0].toHuman() === process.env.CONTROLLER_3)
         );
       })
       .map((item) => {
