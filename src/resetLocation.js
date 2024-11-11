@@ -37,6 +37,12 @@ export const resetLocation = async () => {
           await bot.telegram.sendMessage(
             profile.userId,
             t(profile.lang).scene2.gameover,
+            Markup.inlineKeyboard([
+              Markup.button.url(
+                t(profile.lang).scene3.group,
+                "https://t.me/bkkQuestSupport",
+              ),
+            ]),
           );
         }
         profile.location = null;

@@ -15,7 +15,7 @@ export const en = {
     error1: "The address specified is not valid",
     error2: "The pass has already been activated",
     error3: "You don't have an activated pass",
-    error4: "The pass is not valid",
+    error4: "Failed signature attempt. Restart the bot and try again.",
     text9: "Enter the signature hash of the signed message",
     exit: "Exit",
   },
@@ -32,7 +32,8 @@ export const en = {
     reset:
       "You did not have time to complete the location. To complete it, you will need to book the location again.",
     button_reset: "Try again",
-    gameover: "You have no more attempts",
+    gameover:
+      "Well, you screwed up, astronaut, such a shame. If you ever want to escape the black mirror for real, find me again someday. But for now —farewell.",
   },
   scene3: {
     title: `Scene 3: At the bar “Midlife Crisis”`,
@@ -41,6 +42,7 @@ export const en = {
     text3: `— Go into the toilet and look around. There will be a leak sensor, as in the instructions. You need to close its contacts.`,
     text4: `— You can lick it. Or come up with something smarter — it’s your call.`,
     text5: `— Once you do that, I’ll see the signal on my frequency and send you the coordinates for the next location. There, you'll find a special braindance featuring the events of a certain massage room.`,
+    group: "If you get stuck, contact the quest control center",
     finish: `— Looks like you did it! Here are the coordinates for the next location:`,
     finish_desc: `> 13.7216119, 100.5648836\n>\n>https://maps.app.goo.gl/zSq5HqQHHCfuUYjQ8\n>\n>Transaction in Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__\n>\n>Working hours: from 11:00 to 23:00\n>\n>Room #9`,
     // finish: `> Looks like you did it! Here are the coordinates for the next location: 13.7216119,100.5648836 https://maps.app.goo.gl/zSq5HqQHHCfuUYjQ8\nIn Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,

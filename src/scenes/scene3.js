@@ -15,7 +15,15 @@ const Scene3Wizard = new Scenes.WizardScene("Scene3", async (ctx) => {
   await ctx.reply(t(ctx.session.lang).scene3.text2);
   await ctx.reply(t(ctx.session.lang).scene3.text3);
   await ctx.reply(t(ctx.session.lang).scene3.text4);
-  await ctx.reply(t(ctx.session.lang).scene3.text5);
+  await ctx.reply(
+    t(ctx.session.lang).scene3.text5,
+    Markup.inlineKeyboard([
+      Markup.button.url(
+        t(ctx.session.lang).scene3.group,
+        "https://t.me/bkkQuestSupport",
+      ),
+    ]),
+  );
 });
 
 export { Scene3Wizard };
