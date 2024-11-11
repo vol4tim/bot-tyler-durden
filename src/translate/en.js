@@ -80,23 +80,22 @@ export const en = {
     // finish: `> Кажись у тебя получилось! Вот координаты следующей локации: 13.7176564,100.5668314 Запись в Робономике: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
   },
   scene6: {
-    title: `Сцена 6: Финальная миссия`,
+    title: `Scene 6: The Final Mission`,
     text1:
-      '— Твоя финальная точка — центр наблюдения за "космонавтами-обезьянками." Это довольно секретное место, так что не привлекай внимания. Тебе нужна контейнерная постройка с большой надписью "I love pizza". Найди решётчатую дверь и лестницу, поднимись на третий этаж. Там тебя ждёт стандартный американский double room. В номере ты найдёшь открытые чемоданы. Отыщи пластиковый ключ отеля с изображением обезьянки и выйди на балкон. Там, возможно, ты почувствуешь себя рипером — вскрой черепную коробку андроида, загляни внутрь и найди код для сейфа.',
-    button: "Я на месте",
-    group: "Связаться с центром управления квеста",
-    error:
-      "Придержи коней, приятель. Вижу на радаре, что комната занята. Подожди минут 25, и свяжись со мной снова.",
-    activated: "Локация активирована.",
-    finish1: "— Сработало!",
+      "— Your final destination is the \"monkey astronaut\" observation center. It's a pretty secret place, so don't attract attention. You need a container building with a big sign that says \"I love pizza.\" Find a lattice door and a ladder, go up to the third floor. There, a standard American double room awaits you. You'll find open suitcases in the room. Find the plastic hotel key with a picture of a monkey and go out onto the balcony. There, you might feel like a reaper — crack open the android's skull, look inside, and find the code for the safe.",
+    button: "I'm here",
+    group: "Contact the quest control center",
+    error: "Tyler is busy. Try again later.",
+    activated: "Location activated.",
+    finish1: "— It worked!",
     finish2:
-      "— Ну вот и всё, космонавт! Пара простых задач во время полёта — то, что, думаю, тебе было ",
+      "— Well, that's it, astronaut! A couple of simple tasks during the flight - that's what I think you were",
     finish3:
-      "> Квест подготовлен командой Робономики. Если интересно поддержать нас или узнать больше — напишите любое сообщение в ответ, и оно дойдет до разработчиков. Удачи!",
+      "> The quest is prepared by the Robonomics team. If you are interested in supporting us or learning more, write any message in response, and it will reach the developers. Good luck!",
     reset:
-      "Эй, космонавт, ты там уснул? Не увидел сигнала от тебя. У тебя есть еще 45 мин, чтобы справится с задачей.",
-    button_reset: "Повторить попытку",
+      "Hey, astronaut, are you asleep there? I didn't see your signal. You have 25 more minutes to complete the task.",
+    button_reset: "Try again",
     gameover:
-      "Ну что ж, ты облажался, космонавт, очень жаль. Захочешь сбежать из черного зеркала по-настоящему — найди меня когда-нибудь снова. А пока — бывай. ",
+      "Well, you screwed up, astronaut, too bad. If you want to escape the black mirror for real, come find me again someday. Until then, bye.",
   },
 };
