@@ -38,7 +38,7 @@ export const en = {
     text4: `— You can lick it. Or come up with something smarter — it’s your call.`,
     text5: `— Once you do that, I’ll see the signal on my frequency and send you the coordinates for the next location. There, you'll find a special braindance featuring the events of a certain massage room.`,
     finish: `— Looks like you did it! Here are the coordinates for the next location:`,
-    finish_desc: `> 13.7216119, 100.5648836\n>\n>https://maps.app.goo.gl/zSq5HqQHHCfuUYjQ8\n>\n>Transaction in Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__\n>\n>Working hours: from 11:00 to 23:00`,
+    finish_desc: `> 13.7216119, 100.5648836\n>\n>https://maps.app.goo.gl/zSq5HqQHHCfuUYjQ8\n>\n>Transaction in Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__\n>\n>Working hours: from 11:00 to 23:00\n>\n>Room #9`,
     // finish: `> Looks like you did it! Here are the coordinates for the next location: 13.7216119,100.5648836 https://maps.app.goo.gl/zSq5HqQHHCfuUYjQ8\nIn Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
   },
   scene4: {
@@ -50,7 +50,7 @@ export const en = {
     text5: `— Before you enter, the parlor needs to be activated. The owner is a decent woman, so don't think of the place as a jerk-off point. Message me when you're 15 minutes away from the spot, and I'll check that there won't be anyone extra there.  You should be met and shown in within 30 minutes.`,
     button: "Activate location for 45 min",
     group: "Contact the quest control center",
-    error: "Busy. Try again later.",
+    error: "Tyler is busy. Try again later.",
     activated:
       "The location is activated. You have the coordinates. Show your season pass at the entrance. Don’t delay.",
     finish: `> Looks like you did it!\n>\n>In Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
