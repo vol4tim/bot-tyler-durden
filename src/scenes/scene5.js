@@ -18,7 +18,7 @@ const Scene5Wizard = new Scenes.WizardScene("Scene5", async (ctx) => {
     Markup.inlineKeyboard([
       Markup.button.url(
         t(ctx.session.lang).scene5.group,
-        "https://t.me/bkkQuestSupport",
+        "https://t.me/RoboQuestSupport",
       ),
     ]),
   );

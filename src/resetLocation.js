@@ -40,7 +40,7 @@ export const resetLocation = async () => {
             Markup.inlineKeyboard([
               Markup.button.url(
                 t(profile.lang).scene3.group,
-                "https://t.me/bkkQuestSupport",
+                "https://t.me/RoboQuestSupport",
               ),
             ]),
           );

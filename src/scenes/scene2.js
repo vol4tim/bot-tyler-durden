@@ -27,7 +27,7 @@ const Scene2Wizard = new Scenes.WizardScene("Scene2", async (ctx) => {
       Markup.button.callback(t(ctx.session.lang).scene2.button, "next-scene-2"),
       Markup.button.url(
         t(ctx.session.lang).scene2.group,
-        "https://t.me/bkkQuestSupport",
+        "https://t.me/RoboQuestSupport",
       ),
     ]),
   );
