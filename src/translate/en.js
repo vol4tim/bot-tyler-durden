@@ -75,11 +75,28 @@ export const en = {
     gameover:
       "Well, you screwed up, astronaut, such a shame. If you ever want to escape the black mirror for real, find me again someday. But for now —farewell.",
     finish: `— I see you listened and found how to activate the second key. A sad story, of course. She did nothing wrong, but there will always be purists - cruel, narrow-minded people. Okay, astronaut, time to move on to the third location. Below are the coordinates.`, //
-    finish_desc: `> In Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
+    finish_desc: `> In Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__\n>\n>13.718090, 100.567017\n>\n>https://maps.app.goo.gl/WiNWhAcurb76AoVE8\n>\n>Working hours: from 17:00 to 22:00`,
     // finish: `> Кажись у тебя получилось!\n>\n>Запись в Робономике: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
     // finish: `> Кажись у тебя получилось! Вот координаты следующей локации: 13.7176564,100.5668314 Запись в Робономике: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
   },
   scene6: {
-    title: `The next location will be available tomorrow.`,
+    title: `Сцена 6: Финальная миссия`,
+    text1:
+      '— Твоя финальная точка — центр наблюдения за "космонавтами-обезьянками." Это довольно секретное место, так что не привлекай внимания. Тебе нужна контейнерная постройка с большой надписью "I love pizza". Найди решётчатую дверь и лестницу, поднимись на третий этаж. Там тебя ждёт стандартный американский double room. В номере ты найдёшь открытые чемоданы. Отыщи пластиковый ключ отеля с изображением обезьянки и выйди на балкон. Там, возможно, ты почувствуешь себя рипером — вскрой черепную коробку андроида, загляни внутрь и найди код для сейфа.',
+    button: "Я на месте",
+    group: "Связаться с центром управления квеста",
+    error:
+      "Придержи коней, приятель. Вижу на радаре, что комната занята. Подожди минут 25, и свяжись со мной снова.",
+    activated: "Локация активирована.",
+    finish1: "— Сработало!",
+    finish2:
+      "— Ну вот и всё, космонавт! Пара простых задач во время полёта — то, что, думаю, тебе было ",
+    finish3:
+      "> Квест подготовлен командой Робономики. Если интересно поддержать нас или узнать больше — напишите любое сообщение в ответ, и оно дойдет до разработчиков. Удачи!",
+    reset:
+      "Эй, космонавт, ты там уснул? Не увидел сигнала от тебя. У тебя есть еще 45 мин, чтобы справится с задачей.",
+    button_reset: "Повторить попытку",
+    gameover:
+      "Ну что ж, ты облажался, космонавт, очень жаль. Захочешь сбежать из черного зеркала по-настоящему — найди меня когда-нибудь снова. А пока — бывай. ",
   },
 };

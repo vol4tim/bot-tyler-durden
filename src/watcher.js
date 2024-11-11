@@ -15,12 +15,17 @@ export const watcher = async () => {
   const queue = new Queue(
     async function (r, cb) {
       for (const item of r) {
-        if (item.cid.split("next_location").length >= 2) {
+        if (
+          item.cid.split("next_location").length >= 2 ||
+          item.cid.split("chapter3_skull_opened").length >= 2
+        ) {
           let location;
           if (item.controller === process.env.CONTROLLER_1) {
             location = 1;
           } else if (item.controller === process.env.CONTROLLER_2) {
             location = 2;
+          } else if (item.controller === process.env.CONTROLLER_3) {
+            location = 3;
           }
           if (location) {
             const profile = await Profile.findOne({
@@ -77,6 +82,25 @@ export const watcher = async () => {
                         Markup.button.callback("Next scene", "next-scene-55"),
                       ]),
                     },
+                  );
+                } else if (location === 3) {
+                  await bot.telegram.sendMessage(
+                    profile.userId,
+                    t(profile.lang).scene6.finish1,
+                  );
+                  await bot.telegram.sendMessage(
+                    profile.userId,
+                    t(profile.lang).scene6.finish2,
+                  );
+                  await bot.telegram.sendMessage(
+                    profile.userId,
+                    t(profile.lang)
+                      .scene6.finish3.replace("__blockNumber__", blockNumber)
+                      .replace("__txIndex__", item.txIndex)
+                      .replaceAll("#", "\\#")
+                      .replaceAll(".", "\\.")
+                      .replaceAll("-", "\\-")
+                      .replaceAll("!", "\\!"),
                   );
                 }
               } catch (error) {

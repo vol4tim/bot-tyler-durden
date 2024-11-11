@@ -87,6 +87,41 @@ export const resetLocation = async () => {
         { status: STATUS.AVAIBLE },
         { where: { number: location.number } },
       );
+    } else if (
+      location.number === 3 &&
+      new Date(location.updatedAt).getTime() + 1000 * 60 * 25 < Date.now()
+    ) {
+      const profile = await Profile.findOne({
+        where: { location: location.number },
+      });
+      if (profile) {
+        const attempts = await Attempts.findAll({
+          where: { userId: profile.userId, location: location.number },
+        });
+        if (attempts.length === 1) {
+          await bot.telegram.sendMessage(
+            profile.userId,
+            t(profile.lang).scene6.reset,
+            Markup.inlineKeyboard([
+              Markup.button.callback(
+                t(profile.lang).scene6.button_reset,
+                "next-scene-6",
+              ),
+            ]),
+          );
+        } else {
+          await bot.telegram.sendMessage(
+            profile.userId,
+            t(profile.lang).scene6.gameover,
+          );
+        }
+        profile.location = null;
+        await profile.save();
+      }
+      await Location.update(
+        { status: STATUS.AVAIBLE },
+        { where: { number: location.number } },
+      );
     }
   }
   await sleep(5000);
