@@ -13,6 +13,7 @@ const Scene2Wizard = new Scenes.WizardScene("Scene2", async (ctx) => {
   await ctx.reply(
     t(ctx.session.lang)
       .scene2.text3_desc.replaceAll(".", "\\.")
+      .replaceAll("#", "\\#")
       .replaceAll("-", "\\-")
       .replaceAll("!", "\\!"),
     {
@@ -25,7 +26,7 @@ const Scene2Wizard = new Scenes.WizardScene("Scene2", async (ctx) => {
       Markup.button.callback(t(ctx.session.lang).scene2.button, "next-scene-2"),
       Markup.button.url(
         t(ctx.session.lang).scene2.group,
-        "https://t.me/+vfwLjDqR7fs3MjI6",
+        "https://t.me/+wYX31JzPhkNiZDIy",
       ),
     ]),
   );

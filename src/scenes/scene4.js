@@ -6,6 +6,13 @@ import { t } from "../translate";
 
 const Scene4Wizard = new Scenes.WizardScene("Scene4", async (ctx) => {
   await ctx.reply(Format.bold(t(ctx.session.lang).scene4.title));
+  let lang = "en";
+  if (ctx.session.lang) {
+    lang = ctx.session.lang;
+  }
+  await ctx.replyWithAudio({
+    source: path.resolve(__dirname, `../media/${lang}/4.mp3`),
+  });
   await ctx.reply(t(ctx.session.lang).scene4.text1);
   await ctx.reply(t(ctx.session.lang).scene4.text2);
   await ctx.reply(t(ctx.session.lang).scene4.text3);
@@ -16,7 +23,7 @@ const Scene4Wizard = new Scenes.WizardScene("Scene4", async (ctx) => {
       Markup.button.callback(t(ctx.session.lang).scene4.button, "next-scene-4"),
       Markup.button.url(
         t(ctx.session.lang).scene4.group,
-        "https://t.me/+vfwLjDqR7fs3MjI6",
+        "https://t.me/+wYX31JzPhkNiZDIy",
       ),
     ]),
   );
@@ -46,7 +53,7 @@ Scene4Wizard.action("next-scene-4", async (ctx) => {
     lang = ctx.session.lang;
   }
   await ctx.replyWithAudio({
-    source: path.resolve(__dirname, `../media/${lang}/4.mp3`),
+    source: path.resolve(__dirname, `../media/${lang}/4_help.mp3`),
   });
 
   await ctx.reply(t(ctx.session.lang).scene4.activated);

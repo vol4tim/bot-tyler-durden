@@ -43,6 +43,7 @@ export const watcher = async () => {
                         blockNumber,
                       )
                       .replace("__txIndex__", item.txIndex)
+                      .replaceAll("#", "\\#")
                       .replaceAll(".", "\\.")
                       .replaceAll("-", "\\-")
                       .replaceAll("!", "\\!"),
@@ -59,6 +60,7 @@ export const watcher = async () => {
                     t(profile.lang)
                       .scene4.finish.replace("__blockNumber__", blockNumber)
                       .replace("__txIndex__", item.txIndex)
+                      .replaceAll("#", "\\#")
                       .replaceAll(".", "\\.")
                       .replaceAll("-", "\\-")
                       .replaceAll("!", "\\!"),
