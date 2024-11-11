@@ -101,6 +101,9 @@ export const watcher = async () => {
                       .replaceAll(".", "\\.")
                       .replaceAll("-", "\\-")
                       .replaceAll("!", "\\!"),
+                    {
+                      parse_mode: "MarkdownV2",
+                    },
                   );
                 }
               } catch (error) {
