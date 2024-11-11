@@ -66,18 +66,18 @@ export const resetLocation = async () => {
         if (attempts.length === 1) {
           await bot.telegram.sendMessage(
             profile.userId,
-            t(profile.lang).scene4.reset,
+            t(profile.lang).scene5.reset,
             Markup.inlineKeyboard([
               Markup.button.callback(
-                t(profile.lang).scene4.button_reset,
-                "next-scene-4",
+                t(profile.lang).scene5.button_reset,
+                "repeat-scene-4",
               ),
             ]),
           );
         } else {
           await bot.telegram.sendMessage(
             profile.userId,
-            t(profile.lang).scene2.gameover,
+            t(profile.lang).scene5.gameover,
           );
         }
         profile.location = null;

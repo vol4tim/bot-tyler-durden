@@ -22,10 +22,6 @@ const Scene4Wizard = new Scenes.WizardScene("Scene4", async (ctx) => {
     t(ctx.session.lang).scene4.text5,
     Markup.inlineKeyboard([
       Markup.button.callback(t(ctx.session.lang).scene4.button, "next-scene-4"),
-      Markup.button.url(
-        t(ctx.session.lang).scene4.group,
-        "https://t.me/bkkQuestSupport",
-      ),
     ]),
   );
 });
@@ -52,21 +48,7 @@ Scene4Wizard.action("next-scene-4", async (ctx) => {
     });
   }
   await ctx.editMessageReplyMarkup(undefined);
-
-  let lang = "en";
-  if (ctx.session.lang) {
-    lang = ctx.session.lang;
-  }
-  await ctx.replyWithAudio({
-    source: path.resolve(__dirname, `../media/${lang}/4_help.mp3`),
-  });
-
   await ctx.reply(t(ctx.session.lang).scene4.activated);
-  // await ctx.scene.leave();
-  // await ctx.scene.enter("Scene5");
-});
-Scene4Wizard.action("next-scene-44", async (ctx) => {
-  await ctx.editMessageReplyMarkup(undefined);
   await ctx.scene.leave();
   await ctx.scene.enter("Scene5");
 });

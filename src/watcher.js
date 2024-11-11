@@ -57,8 +57,15 @@ export const watcher = async () => {
                 } else if (location === 2) {
                   await bot.telegram.sendMessage(
                     profile.userId,
+                    t(profile.lang).scene5.finish,
+                  );
+                  await bot.telegram.sendMessage(
+                    profile.userId,
                     t(profile.lang)
-                      .scene4.finish.replace("__blockNumber__", blockNumber)
+                      .scene5.finish_desc.replace(
+                        "__blockNumber__",
+                        blockNumber,
+                      )
                       .replace("__txIndex__", item.txIndex)
                       .replaceAll("#", "\\#")
                       .replaceAll(".", "\\.")
@@ -67,7 +74,7 @@ export const watcher = async () => {
                     {
                       parse_mode: "MarkdownV2",
                       ...Markup.inlineKeyboard([
-                        Markup.button.callback("Next scene", "next-scene-44"),
+                        Markup.button.callback("Next scene", "next-scene-55"),
                       ]),
                     },
                   );

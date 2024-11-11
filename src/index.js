@@ -12,6 +12,7 @@ import { Scene2Wizard } from "./scenes/scene2";
 import { Scene3Wizard } from "./scenes/scene3";
 import { Scene4Wizard } from "./scenes/scene4";
 import { Scene5Wizard } from "./scenes/scene5";
+import { Scene6Wizard } from "./scenes/scene6";
 import { start } from "./scenes/start";
 import { StatusLocationWizard, statusLocation } from "./scenes/statusLocation";
 import { watcher } from "./watcher";
@@ -35,6 +36,7 @@ const runApp = () => {
     Scene3Wizard,
     Scene4Wizard,
     Scene5Wizard,
+    Scene6Wizard,
     StatusLocationWizard,
   ]);
   bot.use(stage.middleware());

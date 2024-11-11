@@ -54,18 +54,32 @@ export const en = {
     text3: `— You know what’s especially cringeworthy? Pattaya is now a hangout not only for tourists looking for sex, but also for married guys from post-Soviet countries. Imagine the reaction of an Englishman when he finds out that a Belarusian or Kazakh is coming here with his wife and three children? Paradoxes, plain and simple.`,
     text4: `— Alright, let's get down to business. You need to get into a massage parlor of my friend's. Show your season pass at the entrance, and she’ll guide you to a special room. No one works in that room anymore, but one interesting story has been preserved within its walls. You’ll have to see it for yourself.`,
     text5: `— Before you enter, the parlor needs to be activated. The owner is a decent woman, so don't think of the place as a jerk-off point. Message me when you're 15 minutes away from the spot, and I'll check that there won't be anyone extra there.  You should be met and shown in within 30 minutes.`,
-    button: "Activate location for 45 min",
+    button: "Activate location for 45 min", //
     group: "Contact the quest control center",
-    error: "Tyler is busy. Try again later.",
+    error: "Tyler is busy. Try again later.", //
+    activated:
+      "The location is activated. You have the coordinates. Show your season pass at the entrance. Don’t delay.", //
+  },
+  scene5: {
+    title: `Scene 5: At the massage parlor`, //
+    text1:
+      "— Cramped cabins of Bangkok massage parlors. A place where students, mothers of many children, girls from remote villages who fled here for the opportunity to spend weekends in huge shopping centers earn extra money. Imagine that it was here that the first rippers appeared - those who not only installed chrome underground, but also freed the synthetic mind from the creators' presets. But pioneers often burn out against the backdrop of the future. Listen to the recording and imagine what happened here. Find a way to get the coordinates of the next location.", //
+    text2:
+      "Damned doll lover! We created them to serve us, and here you are, liberating them from Asimov’s chains! No matter — one less hacker like that. Now, where is that blasted relay...",
+    text3:
+      "My contact said the information could be accessed by using the light switch correctly — big sun, arrow left, arrow right. When you see the bulb flicker...",
+    group: "Contact the quest control center",
     reset:
       "You did not have time to complete the location. To complete it, you will need to book the location again.",
     button_reset: "Try again",
-    activated:
-      "The location is activated. You have the coordinates. Show your season pass at the entrance. Don’t delay.",
-    finish: `> Looks like you did it!\n>\n>In Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
-    // finish: `> Looks like you did it! Here are the coordinates for the next location: 13.7176564,100.5668314\nIn Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
+    gameover:
+      "Well, you screwed up, astronaut, such a shame. If you ever want to escape the black mirror for real, find me again someday. But for now —farewell.",
+    finish: `— I see you listened and found how to activate the second key. A sad story, of course. She did nothing wrong, but there will always be purists - cruel, narrow-minded people. Okay, astronaut, time to move on to the third location. Below are the coordinates.`, //
+    finish_desc: `> In Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
+    // finish: `> Кажись у тебя получилось!\n>\n>Запись в Робономике: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
+    // finish: `> Кажись у тебя получилось! Вот координаты следующей локации: 13.7176564,100.5668314 Запись в Робономике: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,
   },
-  scene5: {
+  scene6: {
     title: `The next location will be available tomorrow.`,
   },
 };
