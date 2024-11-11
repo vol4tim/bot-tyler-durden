@@ -29,6 +29,10 @@ export const en = {
     button: "I'm in a bar",
     group: "Contact the quest control center",
     error: "Tyler is busy. Try again later.",
+    reset:
+      "You did not have time to complete the location. To complete it, you will need to book the location again.",
+    button_reset: "Try again",
+    gameover: "You have no more attempts",
   },
   scene3: {
     title: `Scene 3: At the bar “Midlife Crisis”`,
@@ -51,6 +55,9 @@ export const en = {
     button: "Activate location for 45 min",
     group: "Contact the quest control center",
     error: "Tyler is busy. Try again later.",
+    reset:
+      "You did not have time to complete the location. To complete it, you will need to book the location again.",
+    button_reset: "Try again",
     activated:
       "The location is activated. You have the coordinates. Show your season pass at the entrance. Don’t delay.",
     finish: `> Looks like you did it!\n>\n>In Robonomics: https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__`,

@@ -1,7 +1,9 @@
 import { Markup } from "telegraf";
 import bot from "./bot";
+import Attempts from "./models/attempts";
 import Location, { STATUS } from "./models/location";
 import Profile from "./models/profile";
+import { t } from "./translate";
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 export const resetLocation = async () => {
@@ -17,13 +19,26 @@ export const resetLocation = async () => {
         where: { location: location.number },
       });
       if (profile) {
-        await bot.telegram.sendMessage(
-          profile.userId,
-          `You did not have time to complete the location. To complete it, you will need to book the location again.`,
-          Markup.inlineKeyboard([
-            Markup.button.callback("Back", "back-scene-3"),
-          ]),
-        );
+        const attempts = await Attempts.findAll({
+          where: { userId: profile.userId, location: location.number },
+        });
+        if (attempts.length === 1) {
+          await bot.telegram.sendMessage(
+            profile.userId,
+            t(profile.lang).scene2.reset,
+            Markup.inlineKeyboard([
+              Markup.button.callback(
+                t(profile.lang).scene2.button_reset,
+                "repeat-scene-2",
+              ),
+            ]),
+          );
+        } else {
+          await bot.telegram.sendMessage(
+            profile.userId,
+            t(profile.lang).scene2.gameover,
+          );
+        }
         profile.location = null;
         await profile.save();
       }
@@ -39,13 +54,26 @@ export const resetLocation = async () => {
         where: { location: location.number },
       });
       if (profile) {
-        await bot.telegram.sendMessage(
-          profile.userId,
-          `You did not have time to complete the location. To complete it, you will need to book the location again.`,
-          Markup.inlineKeyboard([
-            Markup.button.callback("Back", "back-scene-3"),
-          ]),
-        );
+        const attempts = await Attempts.findAll({
+          where: { userId: profile.userId, location: location.number },
+        });
+        if (attempts.length === 1) {
+          await bot.telegram.sendMessage(
+            profile.userId,
+            t(profile.lang).scene4.reset,
+            Markup.inlineKeyboard([
+              Markup.button.callback(
+                t(profile.lang).scene4.button_reset,
+                "next-scene-4",
+              ),
+            ]),
+          );
+        } else {
+          await bot.telegram.sendMessage(
+            profile.userId,
+            t(profile.lang).scene2.gameover,
+          );
+        }
         profile.location = null;
         await profile.save();
       }

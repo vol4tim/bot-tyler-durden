@@ -1,5 +1,6 @@
 import path from "path";
 import { Format, Markup, Scenes } from "telegraf";
+import Attempts from "../models/attempts";
 import Location, { STATUS } from "../models/location";
 import Profile from "../models/profile";
 import { t } from "../translate";
@@ -45,6 +46,10 @@ Scene4Wizard.action("next-scene-4", async (ctx) => {
       { location: 2 },
       { where: { userId: ctx.from.id.toString() } },
     );
+    await Attempts.create({
+      userId: ctx.from.id.toString(),
+      location: 2,
+    });
   }
   await ctx.editMessageReplyMarkup(undefined);
 
@@ -64,9 +69,4 @@ Scene4Wizard.action("next-scene-44", async (ctx) => {
   await ctx.editMessageReplyMarkup(undefined);
   await ctx.scene.leave();
   await ctx.scene.enter("Scene5");
-});
-Scene4Wizard.action("back-scene-4", async (ctx) => {
-  await ctx.editMessageReplyMarkup(undefined);
-  await ctx.scene.leave();
-  await ctx.scene.enter("Scene4");
 });

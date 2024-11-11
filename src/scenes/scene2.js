@@ -1,4 +1,5 @@
 import { Format, Markup, Scenes } from "telegraf";
+import Attempts from "../models/attempts";
 import Location, { STATUS } from "../models/location";
 import Profile from "../models/profile";
 import { t } from "../translate";
@@ -57,6 +58,10 @@ Scene2Wizard.action("next-scene-2", async (ctx) => {
       { location: 1 },
       { where: { userId: ctx.from.id.toString() } },
     );
+    await Attempts.create({
+      userId: ctx.from.id.toString(),
+      location: 1,
+    });
   }
   await ctx.editMessageReplyMarkup(undefined);
   await ctx.scene.leave();
