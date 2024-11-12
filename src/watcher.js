@@ -55,7 +55,10 @@ export const watcher = async () => {
                     {
                       parse_mode: "MarkdownV2",
                       ...Markup.inlineKeyboard([
-                        Markup.button.callback("Next scene", "next-scene-3"),
+                        Markup.button.callback(
+                          t(profile.lang).scene3.next_scene,
+                          "next-scene-3",
+                        ),
                       ]),
                     },
                   );
@@ -79,7 +82,10 @@ export const watcher = async () => {
                     {
                       parse_mode: "MarkdownV2",
                       ...Markup.inlineKeyboard([
-                        Markup.button.callback("Next scene", "next-scene-55"),
+                        Markup.button.callback(
+                          t(profile.lang).scene5.next_scene,
+                          "next-scene-55",
+                        ),
                       ]),
                     },
                   );
