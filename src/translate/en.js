@@ -6,7 +6,7 @@ export const en = {
     text3: `— But here’s the thing: even if you become the one giving the orders, you’ll still be part of the system. Shepherd or sheep — the roles may differ, but the rules stay the same.`,
     text4: `— The real choice isn’t about climbing higher; it’s about leaving the game entirely. It’s not about power — it’s about freedom. Almost like breaking out of samsara. If you’re tired of living in this loop, welcome to cyberpunk.`,
     text5: `— Here's your first step. Sign this. A digital signature — and you're with us.`,
-    desc: `> Use your account with an activated season pass to sign a message with the text "\`I'm a space monkey!\`". You can use the [MetaMask](https://metamask.io/) app and the message signing service from [Etherscan](https://etherscan.io/verifiedSignatures) for this.`,
+    desc: `> Your space monkey card contains an Ethereum account for the season pass.\n>\n>Using a season pass account, you need to sign a message with the following text:\n>\n>\`I'm a space monkey!\`\n>\n>An example of how this can be done using the MetaMask application and the Etherscan service:\n>\n>- You need to import a season pass account into [MetaMask](https://metamask.io/)\n>\n>- Next, in the application, you need to go to the browser tab and paste the link to the Etherscan message signing service:\n>\n>https://etherscan.io/verifiedSignatures\n>\n>- In the service, select the Sign Message function and approve the connection to MetaMask\n>\n>- Paste the message and sign\n>\n>- Copy the Signature Hash and click Publish to publish the message`,
     button: "Send Tyler a signed message",
     text7:
       "— Signed — means you’re in. From here, we’ll see how far you can go. The fight isn’t with someone else — it’s with yourself.",
