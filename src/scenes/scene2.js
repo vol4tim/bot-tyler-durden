@@ -14,6 +14,8 @@ const Scene2Wizard = new Scenes.WizardScene("Scene2", async (ctx) => {
   await ctx.reply(
     t(ctx.session.lang)
       .scene2.text3_desc.replaceAll(".", "\\.")
+      .replaceAll("(", "\\(")
+      .replaceAll(")", "\\)")
       .replaceAll("#", "\\#")
       .replaceAll("-", "\\-")
       .replaceAll("!", "\\!"),
