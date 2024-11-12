@@ -1,5 +1,6 @@
 import path from "path";
 import { Format, Markup, Scenes } from "telegraf";
+import bot from "../bot";
 import Attempts from "../models/attempts";
 import Location, { STATUS } from "../models/location";
 import Profile from "../models/profile";
@@ -46,6 +47,16 @@ Scene4Wizard.action("next-scene-4", async (ctx) => {
       userId: ctx.from.id.toString(),
       location: 2,
     });
+
+    const profile = await Profile.findOne({
+      where: { userId: ctx.from.id.toString() },
+    });
+    if (profile) {
+      await bot.telegram.sendMessage(
+        process.env.GROUP_SUPPORT,
+        `Активирована локация #2. Пользователем @${profile.username} `,
+      );
+    }
   }
   await ctx.editMessageReplyMarkup(undefined);
   await ctx.reply(t(ctx.session.lang).scene4.activated);
