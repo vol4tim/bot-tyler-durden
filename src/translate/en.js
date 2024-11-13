@@ -29,9 +29,9 @@ export const en = {
     button: "I'm in a bar",
     group: "Contact the quest control center",
     error:
-      "Seems like you’re having a good time, buddy. But find the will to get the job done — you’ve got 25 minutes. After that, it’s game over.",
+      "Alright, perfect. But I’ve got a feeling someone’s watching me, so I need to wait it out. Send me a signal in about 25 minutes, and in the meantime, just relax.",
     reset:
-      "You did not have time to complete the location. To complete it, you will need to book the location again.",
+      "Seems like you’re having a good time, buddy. But find the will to get the job done — you’ve got 25 minutes. After that, it’s game over.",
     button_reset: "Try again",
     gameover:
       "Well, you screwed up, astronaut, such a shame. If you ever want to escape the black mirror for real, find me again someday. But for now —farewell.",

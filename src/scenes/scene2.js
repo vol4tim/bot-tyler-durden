@@ -3,6 +3,7 @@ import bot from "../bot";
 import Attempts from "../models/attempts";
 import Location, { STATUS } from "../models/location";
 import Profile from "../models/profile";
+import { escape } from "../tools/utils";
 import { t } from "../translate";
 
 const Scene2Wizard = new Scenes.WizardScene("Scene2", async (ctx) => {
@@ -12,18 +13,9 @@ const Scene2Wizard = new Scenes.WizardScene("Scene2", async (ctx) => {
   await ctx.reply(t(ctx.session.lang).scene2.text1);
   await ctx.reply(t(ctx.session.lang).scene2.text2);
   await ctx.reply(t(ctx.session.lang).scene2.text3);
-  await ctx.reply(
-    t(ctx.session.lang)
-      .scene2.text3_desc.replaceAll(".", "\\.")
-      .replaceAll("(", "\\(")
-      .replaceAll(")", "\\)")
-      .replaceAll("#", "\\#")
-      .replaceAll("-", "\\-")
-      .replaceAll("!", "\\!"),
-    {
-      parse_mode: "MarkdownV2",
-    },
-  );
+  await ctx.reply(escape(t(ctx.session.lang).scene2.text3_desc), {
+    parse_mode: "MarkdownV2",
+  });
   await ctx.reply(
     t(ctx.session.lang).scene2.text4,
     Markup.inlineKeyboard([

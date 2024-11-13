@@ -4,6 +4,7 @@ import { Composer, Format, Markup, Scenes } from "telegraf";
 import nft_abi from "../abi/NFT.json";
 import SeasonPass from "../models/seasonPass";
 import { getInstance as getInstanceEthereum } from "../tools/ethereum";
+import { escape } from "../tools/utils";
 import { t } from "../translate";
 
 const verifyMessage = ({ message, address, signature }) => {
@@ -58,16 +59,9 @@ const Scene1Wizard = new Scenes.WizardScene(
     await ctx.reply(t(ctx.session.lang).scene1.text3);
     await ctx.reply(t(ctx.session.lang).scene1.text4);
     await ctx.reply(t(ctx.session.lang).scene1.text5);
-    await ctx.reply(
-      t(ctx.session.lang)
-        .scene1.desc.replaceAll(".", "\\.")
-        .replaceAll("#", "\\#")
-        .replaceAll("-", "\\-")
-        .replaceAll("!", "\\!"),
-      {
-        parse_mode: "MarkdownV2",
-      },
-    );
+    await ctx.reply(escape(t(ctx.session.lang).scene1.desc), {
+      parse_mode: "MarkdownV2",
+    });
     await ctx.replyWithVideo(
       {
         source: path.resolve(__dirname, `../media/1.mp4`),

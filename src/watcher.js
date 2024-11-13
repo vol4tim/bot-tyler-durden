@@ -6,6 +6,7 @@ import Location, { STATUS } from "./models/location";
 import Profile from "./models/profile";
 import { PATH_QUEUE_DB } from "./paths";
 import { getApi, on } from "./tools/polkadot";
+import { escape } from "./tools/utils";
 import { t } from "./translate";
 
 export const watcher = async () => {
@@ -42,16 +43,14 @@ export const watcher = async () => {
                   );
                   await bot.telegram.sendMessage(
                     profile.userId,
-                    t(profile.lang)
-                      .scene3.finish_desc.replace(
-                        "__blockNumber__",
-                        blockNumber,
-                      )
-                      .replace("__txIndex__", item.txIndex)
-                      .replaceAll("#", "\\#")
-                      .replaceAll(".", "\\.")
-                      .replaceAll("-", "\\-")
-                      .replaceAll("!", "\\!"),
+                    escape(
+                      t(profile.lang)
+                        .scene3.finish_desc.replace(
+                          "__blockNumber__",
+                          blockNumber,
+                        )
+                        .replace("__txIndex__", item.txIndex),
+                    ),
                     {
                       parse_mode: "MarkdownV2",
                       ...Markup.inlineKeyboard([
@@ -69,16 +68,14 @@ export const watcher = async () => {
                   );
                   await bot.telegram.sendMessage(
                     profile.userId,
-                    t(profile.lang)
-                      .scene5.finish_desc.replace(
-                        "__blockNumber__",
-                        blockNumber,
-                      )
-                      .replace("__txIndex__", item.txIndex)
-                      .replaceAll("#", "\\#")
-                      .replaceAll(".", "\\.")
-                      .replaceAll("-", "\\-")
-                      .replaceAll("!", "\\!"),
+                    escape(
+                      t(profile.lang)
+                        .scene5.finish_desc.replace(
+                          "__blockNumber__",
+                          blockNumber,
+                        )
+                        .replace("__txIndex__", item.txIndex),
+                    ),
                     {
                       parse_mode: "MarkdownV2",
                       ...Markup.inlineKeyboard([
@@ -100,13 +97,11 @@ export const watcher = async () => {
                   );
                   await bot.telegram.sendMessage(
                     profile.userId,
-                    t(profile.lang)
-                      .scene6.finish3.replace("__blockNumber__", blockNumber)
-                      .replace("__txIndex__", item.txIndex)
-                      .replaceAll("#", "\\#")
-                      .replaceAll(".", "\\.")
-                      .replaceAll("-", "\\-")
-                      .replaceAll("!", "\\!"),
+                    escape(
+                      t(profile.lang)
+                        .scene6.finish3.replace("__blockNumber__", blockNumber)
+                        .replace("__txIndex__", item.txIndex),
+                    ),
                     {
                       parse_mode: "MarkdownV2",
                     },

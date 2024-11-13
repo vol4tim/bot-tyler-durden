@@ -29,6 +29,8 @@ const RunWizard = new Scenes.WizardScene(
       Markup.inlineKeyboard([
         Markup.button.callback("English", "lang-en"),
         Markup.button.callback("Русский", "lang-ru"),
+        Markup.button.callback("中文", "lang-ch"),
+        Markup.button.callback("한국어", "lang-ko"),
       ]),
     );
     return ctx.wizard.next();
