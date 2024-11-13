@@ -45,7 +45,7 @@ export const ch = {
     text5: `— 一旦你完成这个，我就会在我的频率上看到信号，并给你发送下一个地点的坐标。在那里，你会找到一段特殊的脑舞，内容涉及某个按摩房间的事件。`,
     group: "如果你卡住了，联系游戏控制中心",
     finish: `— — 看起来你成功了！你找到的设备已经发送了下一个地点的坐标链接。通过这个交易找到它们：`,
-    finish_desc: `> https://maps.app.goo.gl/WiNWhAcurb76AoVE8\n>\n>https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__\n>\n>工作时间：11:00 至 23:00\n>\n>9号房间`,
+    finish_desc: `> https://maps.app.goo.gl/zSq5HqQHHCfuUYjQ8\n>\n>https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__\n>\n>工作时间：11:00 至 23:00\n>\n>9号房间`,
     button_next: "Next scene",
   },
   scene4: {

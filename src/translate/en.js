@@ -45,7 +45,7 @@ export const en = {
     text5: `— Once you do that, I’ll see the signal on my frequency and send you the coordinates for the next location. There, you'll find a special braindance featuring the events of a certain massage room.`,
     group: "If you get stuck, contact the quest control center",
     finish: `— Looks like you did it! The device you found sent you a link to the coordinates of the next location. Find them in this transaction:`,
-    finish_desc: `> https://maps.app.goo.gl/WiNWhAcurb76AoVE8\n>\n>https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__\n>\n>Working hours: from 11:00 to 23:00\n>\n>Room #9`,
+    finish_desc: `> https://maps.app.goo.gl/zSq5HqQHHCfuUYjQ8\n>\n>https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__\n>\n>Working hours: from 11:00 to 23:00\n>\n>Room #9`,
     button_next: "Next scene",
   },
   scene4: {

@@ -45,7 +45,7 @@ export const ko = {
     text5: `— 그렇게 하면, 저는 제 주파수에서 신호를 받을 것이고 다음 위치의 좌표를 보내드릴 것입니다. 거기에서 특정 마사지 방의 사건을 다룬 특별한 브레인 댄스를 찾을 수 있습니다.`,
     group: "막히면 퀘스트 관제 센터에 연락하세요",
     finish: `— 잘했군요! 당신이 찾은 장치가 다음 위치의 좌표 링크를 보냈습니다. 이 트랜잭션에서 확인하세요:`,
-    finish_desc: `> https://maps.app.goo.gl/WiNWhAcurb76AoVE8\n>\n>https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__\n>\n>근무 시간: 11:00부터 23:00까지\n>\n>방 #9`,
+    finish_desc: `> https://maps.app.goo.gl/zSq5HqQHHCfuUYjQ8\n>\n>https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__\n>\n>근무 시간: 11:00부터 23:00까지\n>\n>방 #9`,
     button_next: "Next scene",
   },
   scene4: {

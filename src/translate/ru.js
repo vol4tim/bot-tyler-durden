@@ -46,7 +46,7 @@ export const ru = {
     text5: `— Как только ты это сделаешь, я увижу сигнал на своей частоте и отправлю тебе координаты следующей локации. Там тебя ждёт особенный брейнданс событий одной массажной кабинки.`,
     group: "Если застряли, связь с центром управления квеста",
     finish: `— Кажись, у тебя получилось! Устройство, которое ты нашёл, отправило тебе ссылку на координаты следующей локации. Ищи их в этой транзакции:`,
-    finish_desc: `> https://maps.app.goo.gl/WiNWhAcurb76AoVE8\n>\n>https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__\n>\n>Рабочие часы: с 11:00 до 23:00\n>\n>Кабинка #9`,
+    finish_desc: `> https://maps.app.goo.gl/zSq5HqQHHCfuUYjQ8\n>\n>https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__\n>\n>Рабочие часы: с 11:00 до 23:00\n>\n>Кабинка #9`,
     button_next: "Следующая сцена",
   },
   scene4: {
