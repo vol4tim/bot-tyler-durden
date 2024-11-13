@@ -61,6 +61,10 @@ export const watcher = async () => {
                       ]),
                     },
                   );
+                  await bot.telegram.sendMessage(
+                    process.env.GROUP_SUPPORT,
+                    `Локация #1 пройдена. Пользователем @${profile.username} `,
+                  );
                 } else if (location === 2) {
                   await bot.telegram.sendMessage(
                     profile.userId,
@@ -86,6 +90,10 @@ export const watcher = async () => {
                       ]),
                     },
                   );
+                  await bot.telegram.sendMessage(
+                    process.env.GROUP_SUPPORT,
+                    `Локация #2 пройдена. Пользователем @${profile.username} `,
+                  );
                 } else if (location === 3) {
                   await bot.telegram.sendMessage(
                     profile.userId,
@@ -105,6 +113,10 @@ export const watcher = async () => {
                     {
                       parse_mode: "MarkdownV2",
                     },
+                  );
+                  await bot.telegram.sendMessage(
+                    process.env.GROUP_SUPPORT,
+                    `Локация #3 пройдена. Пользователем @${profile.username} `,
                   );
                 }
               } catch (error) {

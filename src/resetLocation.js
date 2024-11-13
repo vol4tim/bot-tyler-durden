@@ -47,6 +47,10 @@ export const resetLocation = async () => {
         }
         profile.location = null;
         await profile.save();
+        await bot.telegram.sendMessage(
+          process.env.GROUP_SUPPORT,
+          `Локация #1 провалена. Пользователем @${profile.username} `,
+        );
       }
       await Location.update(
         { status: STATUS.AVAIBLE },
@@ -82,6 +86,10 @@ export const resetLocation = async () => {
         }
         profile.location = null;
         await profile.save();
+        await bot.telegram.sendMessage(
+          process.env.GROUP_SUPPORT,
+          `Локация #2 провалена. Пользователем @${profile.username} `,
+        );
       }
       await Location.update(
         { status: STATUS.AVAIBLE },
@@ -117,6 +125,10 @@ export const resetLocation = async () => {
         }
         profile.location = null;
         await profile.save();
+        await bot.telegram.sendMessage(
+          process.env.GROUP_SUPPORT,
+          `Локация #3 провалена. Пользователем @${profile.username} `,
+        );
       }
       await Location.update(
         { status: STATUS.AVAIBLE },
