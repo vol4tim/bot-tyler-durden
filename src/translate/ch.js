@@ -77,7 +77,7 @@ export const ch = {
     gameover:
       "好吧，你搞砸了，宇航员，真可惜。如果你真的想逃离这面黑镜，某天再来找我吧。但现在——告别了。",
     finish: `— 好吧，你找到如何激活第二个钥匙了。真是个悲伤的故事。那个女孩并没有做错什么，但总会有那些追求“纯洁”的狂热者——那些严苛、狭隘的人。现在，宇航员，是时候前往第三个地点了。以下是你激活的设备发送的交易。和之前一样，找到坐标：`,
-    finish_desc: `> https://maps.app.goo.gl/6XDTGZZc9dviBcBd9\n>\n>https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__\n>\n>工作时间：17:00 至 22:00`,
+    finish_desc: `> https://maps.app.goo.gl/WiNWhAcurb76AoVE8\n>\n>https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__\n>\n>工作时间：17:00 至 22:00`,
     button_next: "Next scene",
   },
   scene6: {

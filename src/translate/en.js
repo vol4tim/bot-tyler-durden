@@ -77,7 +77,7 @@ export const en = {
     gameover:
       "Well, you screwed up, astronaut, such a shame. If you ever want to escape the black mirror for real, find me again someday. But for now —farewell.",
     finish: `— Alright, you found how to activate the second key. Sad story, really. The girl didn’t do anything wrong, but there are always purity zealots — harsh, narrow-minded people. Now, astronaut, it’s time to move on to the third location. Below is the transaction received from the device you activated. As before, find the coordinates:`,
-    finish_desc: `> https://maps.app.goo.gl/6XDTGZZc9dviBcBd9\n>\n>https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__\n>\n>Working hours: from 17:00 to 22:00`,
+    finish_desc: `> https://maps.app.goo.gl/WiNWhAcurb76AoVE8\n>\n>https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__\n>\n>Working hours: from 17:00 to 22:00`,
     button_next: "Next scene",
   },
   scene6: {
