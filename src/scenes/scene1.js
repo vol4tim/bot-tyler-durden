@@ -163,6 +163,7 @@ const Scene1Wizard = new Scenes.WizardScene(
     await SeasonPass.create({
       address: ctx.session.addressAccount,
       tokenId: ctx.session.tokenId,
+      userIdActivate: ctx.from.id.toString(),
     });
 
     await ctx.reply(
