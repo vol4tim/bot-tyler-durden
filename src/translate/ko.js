@@ -77,7 +77,7 @@ export const ko = {
     gameover:
       "음, 실수했군요, 우주 비행사, 정말 아쉽네요. 만약 언젠가 진짜로 블랙 미러에서 벗어나고 싶다면, 다시 찾아오세요. 하지만 지금은 — 작별입니다.",
     finish: `— 좋아요, 두 번째 키를 활성화하는 방법을 찾았군요. 슬픈 이야기예요, 정말로. 그 소녀는 잘못한 게 없었지만, 항상 순결을 강요하는 광신자들이 있죠 — 엄격하고 편협한 사람들이요. 이제, 우주 비행사, 세 번째 위치로 이동할 시간입니다. 아래는 당신이 활성화한 장치로부터 받은 트랜잭션입니다. 이전과 마찬가지로, 좌표를 찾아보세요:`,
-    finish_desc: `> https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__\n>\n>근무 시간: 17:00부터 22:00까지`,
+    finish_desc: `> https://maps.app.goo.gl/6XDTGZZc9dviBcBd9\n>\n>https://robonomics.subscan.io/extrinsic/__blockNumber__-__txIndex__\n>\n>근무 시간: 17:00부터 22:00까지`,
     button_next: "Next scene",
   },
   scene6: {
