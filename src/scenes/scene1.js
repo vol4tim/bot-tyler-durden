@@ -53,6 +53,11 @@ stepHandler.use(() => {
 const Scene1Wizard = new Scenes.WizardScene(
   "Scene1",
   async (ctx) => {
+    if (Date.now() > parseInt(process.env.TIME_STOP)) {
+      await ctx.reply(t(ctx.session.lang).scene1.stop);
+      return await ctx.scene.leave();
+    }
+
     await ctx.reply(Format.bold(t(ctx.session.lang).scene1.title));
     await ctx.reply(t(ctx.session.lang).scene1.text1);
     await ctx.reply(t(ctx.session.lang).scene1.text2);

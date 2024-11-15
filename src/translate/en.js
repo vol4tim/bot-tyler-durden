@@ -18,6 +18,7 @@ export const en = {
     error4: "Failed signature attempt. Restart the bot and try again.",
     text9: "Enter the signature hash of the signed message",
     exit: "Exit",
+    stop: "— Alas, astronaut, you are too late. The rocket flew away without you. But don't worry, once you've tasted digital freedom, you won't want to give it up. We'll cross paths again sometime. Bye!",
   },
   scene2: {
     title: "Scene 2: Tyler Accompanies to First Location",
